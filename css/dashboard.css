@@ -1,0 +1,265 @@
+/* dashboard.css */
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 0 24px;
+    height: 60px;
+  }
+  
+  .navbar-brand {
+    font-size: 20px;
+    font-weight: 600;
+    color: #4F2D7F;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 8px 0;
+    transition: color 0.2s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #4F2D7F;
+  }
+  
+  .nav-links li a.active {
+    color: #4F2D7F;
+    border-bottom: 2px solid #4F2D7F;
+  }
+  
+  .user-greeting {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .user-initials {
+    width: 32px;
+    height: 32px;
+    background-color: #4F2D7F;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  /* MAIN CONTENT */
+  .main-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto 60px;
+  }
+  
+  .main-content h1 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  /* CARD SECTION */
+  .card-section {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .card-header h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+  }
+  
+  /* FILTER PANEL (hidden by default) */
+  .filter-sort {
+    display: none;
+    margin-top: 16px;
+    padding: 12px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    align-items: center;
+    gap: 12px;
+    /* Align content to the right */
+    justify-content: flex-end;
+  }
+  
+  .filter-sort.active {
+    display: flex;
+  }
+  
+  .filter-sort label {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .filter-sort select {
+    padding: 6px 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+  
+  .filter-sort select:focus {
+    border-color: #4F2D7F;
+  }
+  
+  /* TABLE SCROLLABLE - adjust max-height to show ~4 rows */
+  .table-scrollable {
+    max-height: 300px; /* Adjust this value as needed for the size of the table 400/4 */ 
+    overflow-y: auto;
+    margin-bottom: 16px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+  }
+  
+  /* TABLE */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+  }
+  
+  /* Make the table header sticky */
+  thead {
+    background-color: #f9f9f9;
+  }
+  
+  thead th {
+    position: sticky;
+    top: 0;
+    background-color: #f9f9f9;
+    z-index: 1;
+  }
+  
+  th, td {
+    padding: 14px 16px;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+  }
+  
+  th {
+    font-weight: 600;
+    color: #444;
+  }
+  
+  /* CARD FOOTER */
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    padding-top: 16px;
+    margin-top: 16px;
+  }
+  
+  .card-footer h3 {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+    color: #333;
+  }
+  
+  /* BUTTONS */
+  .filter-button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #4F2D7F;
+    border-radius: 6px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .filter-button:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .create-button {
+    background-color: #4F2D7F;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.2s;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: auto; /* This pushes the button to the right in a flex container */
+  }
+  
+  
+  .create-button:hover {
+    background-color: #3e2164;
+    transform: translateY(-1px);
+  }
+  
+  /* STATUS PILL STYLES */
+  .status-pill {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    min-width: 70px;
+    white-space: nowrap;
+  }
+  
+  .status-pill.active {
+    background-color: #28a745;
+  }
+  
+  .status-pill.review {
+    background-color: #ffc107;
+    color: #333;
+  }
+  
+  .status-pill.pending {
+    background-color: #fd7e14;
+  }
+  
+  .status-pill.in-progress {
+    background-color: #17a2b8;
+  }
+  
+  .status-pill.completed {
+    background-color: #6c757d;
+  }
+  

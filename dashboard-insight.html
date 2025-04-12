@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JMU CARE | Grant Insight</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/dashboard-insight.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Top Navigation -->
+  <nav class="navbar">
+    <div class="navbar-brand">JMU CARE</div>
+    <!-- Hamburger Toggle Button (visible on small screens) -->
+    <button class="navbar-toggle" id="navbar-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="grant-application.html">Grant Application</a></li>
+      <li><a href="create-new-user.html">Create User</a></li>
+      <li><a href="messages.html">Messages</a></li>
+    </ul>
+    <div class="user-greeting">
+      <span>Welcome, John</span>
+      <div class="user-initials">JD</div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="insight-content">
+    <!-- Back to Grants Link -->
+    <div class="back-link">
+      <a href="dashboard.html">&larr; Back to Grants</a>
+    </div>
+
+    <!-- Grant Header -->
+    <div class="grant-header">
+      <h1 id="grant-title">Grant Title</h1>
+      <span id="grant-status" class="status-pill">Status</span>
+      <p id="grant-category" class="grant-category">Category</p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab-button active" data-tab="overview-tab">Overview</button>
+      <button class="tab-button" data-tab="documents-tab">Documents</button>
+    </div>
+
+    <div class="content-container">
+      <!-- LEFT COLUMN: Overview / Documents -->
+      <div class="left-column">
+        <!-- Overview Tab Content -->
+        <div id="overview-tab" class="tab-content active">
+          <h2>Overview</h2>
+          <p id="grant-overview">Grant overview text goes here.</p>
+          <div class="grant-details">
+            <div class="detail-item" id="submission-date"><strong>Submission Date:</strong> --</div>
+            <div class="detail-item" id="award-date"><strong>Award Date:</strong> --</div>
+            <div class="detail-item" id="award-amount"><strong>Award Amount:</strong> --</div>
+          </div>
+        </div>
+
+        <!-- Documents Tab Content -->
+        <div id="documents-tab" class="tab-content">
+          <h2>Documents</h2>
+          <p>No documents have been uploaded yet. Please check back later.</p>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: Project Lead & Collaborators -->
+      <aside class="right-column">
+        <div class="project-lead-card">
+          <h3>Project Lead</h3>
+          <div class="lead-info">
+            <img src="./images/avatar.png" alt="Lead Avatar" class="avatar">
+            <div>
+              <strong id="lead-name">Lead Name</strong>
+              <p id="lead-dept">Department</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="collaborators-card">
+          <h3>Collaborators</h3>
+          <ul id="collaborators-list">
+            <!-- Collaborators will be added dynamically -->
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <script src="./js/dashboard-insight.js"></script>
+</body>
+</html>

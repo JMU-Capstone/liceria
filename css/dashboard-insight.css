@@ -1,0 +1,236 @@
+/*****************************************************
+  dashboard-insight.css
+******************************************************/
+
+/* MAIN CONTENT WRAPPER */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 0 24px;
+    height: 60px;
+  }
+  
+  .navbar-brand {
+    font-size: 20px;
+    font-weight: 600;
+    color: #4F2D7F;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 8px 0;
+    transition: color 0.2s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #4F2D7F;
+  }
+  
+  .nav-links li a.active {
+    color: #4F2D7F;
+    border-bottom: 2px solid #4F2D7F;
+  }
+  
+  .user-greeting {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .user-initials {
+    width: 32px;
+    height: 32px;
+    background-color: #4F2D7F;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+
+.insight-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+  }
+  
+  /* BACK TO GRANTS LINK */
+  .back-link a {
+    color: #4F2D7F;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+  
+  .back-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* GRANT HEADER */
+  .grant-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin: 16px 0;
+  }
+  
+  .grant-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+  }
+  
+  .grant-header .status-pill {
+    margin-left: auto;
+  }
+  
+  .grant-header .grant-category {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+    flex-basis: 100%;
+  }
+  
+  /* TABS */
+  .tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  
+  .tab-button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    color: #4F2D7F;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+  }
+  
+  .tab-button:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .tab-button.active {
+    background-color: #4F2D7F;
+    color: #fff;
+    border-color: #4F2D7F;
+  }
+  
+  /* CONTENT CONTAINER */
+  .content-container {
+    display: flex;
+    gap: 24px;
+  }
+  
+  /* LEFT COLUMN */
+  .left-column {
+    flex: 1;
+  }
+  
+  /* RIGHT COLUMN */
+  .right-column {
+    width: 300px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* TAB CONTENT */
+  .tab-content {
+    display: none;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+  /* OVERVIEW SECTION */
+  .grant-details {
+    margin-top: 20px;
+  }
+  
+  .detail-item {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  /* PROJECT LEAD CARD */
+  .project-lead-card,
+  .collaborators-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+  
+  .project-lead-card h3,
+  .collaborators-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #333;
+  }
+  
+  .lead-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .lead-info .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .lead-info strong {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* COLLABORATORS CARD */
+  .collaborators-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .collaborators-card li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  
+  .collaborators-card .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+  

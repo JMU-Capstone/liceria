@@ -1,0 +1,194 @@
+/* main.css (Global/Shared) */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Global font & background */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+  }
+  
+  /* Variables (optional) */
+  :root {
+    --primary-color: #4F2D7F;
+    --secondary-color: #999999;
+    --bg-color: #ffffff;
+    --text-color: #333333;
+  }
+  .user-initials {
+    width: 32px;
+    height: 32px;
+    background-color: #4F2D7F;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 600;
+  }  
+
+/* Base Navbar Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 0 24px;
+  height: 60px;
+  position: relative;
+}
+
+.navbar-brand {
+  font-size: 20px;
+  font-weight: 600;
+  color: #4F2D7F;
+}
+
+/* Desktop Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: color 0.2s ease;
+}
+
+.nav-links li a:hover {
+  color: #4F2D7F;
+}
+
+.nav-links li a.active {
+  color: #4F2D7F;
+  border-bottom: 2px solid #4F2D7F;
+}
+
+/* User Greeting */
+.user-greeting {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #666;
+}
+
+.user-initials {
+  width: 32px;
+  height: 32px;
+  background-color: #4F2D7F;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Hamburger Toggle (Hidden on Desktop) */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #4F2D7F;
+  margin: 4px 0;
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+  /* Show hamburger button */
+  .navbar-toggle {
+    display: flex;
+  }
+  
+  /* Hide nav links by default */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    border-bottom: 1px solid #eee;
+    z-index: 999;
+  }
+  
+  /* Show nav links when the "open" class is added */
+  .nav-links.open {
+    display: flex;
+  }
+  
+  .nav-links li {
+    text-align: center;
+    padding: 12px 0;
+  }
+  
+  /* Optionally hide user greeting on mobile for cleaner look */
+  .user-greeting {
+    display: none;
+  }
+}
+/* Base Navbar Styles (Desktop) */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+/* Responsive Mobile Styles */
+@media (max-width: 768px) {
+  /* Hide nav links by default */
+  .nav-links {
+    display: none !important;  /* Force override of the base rule */
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    border-bottom: 1px solid #eee;
+    z-index: 999;
+  }
+  
+  /* When the "open" class is present, show the menu */
+  .nav-links.open {
+    display: flex !important;
+  }
+  
+  .nav-links li {
+    text-align: center;
+    padding: 12px 0;
+  }
+  
+  /* Show hamburger button */
+  .navbar-toggle {
+    display: flex;
+  }
+  
+  /* Optionally hide the user greeting for a cleaner look */
+  .user-greeting {
+    display: none;
+  }
+}

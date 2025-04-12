@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JMU CARE | Dashboard</title>
+
+  <!-- Global & Page-Specific CSS -->
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/dashboard.css" />
+
+  <!-- Google Font: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" 
+    rel="stylesheet"
+  >
+</head>
+<body>
+  <!-- Top Navigation -->
+  <nav class="navbar">
+    <div class="navbar-brand">JMU CARE</div>
+    <!-- Hamburger Toggle Button (visible on small screens) -->
+    <button class="navbar-toggle" id="navbar-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="dashboard.html" class="active">Dashboard</a></li>
+      <li><a href="grant-application.html">Grant Application</a></li>
+      <li><a href="create-new-user.html">Create User</a></li>
+      <li><a href="messages.html">Messages</a></li>
+    </ul>
+    <div class="user-greeting">
+      <span>Welcome, John</span>
+      <div class="user-initials">JD</div>
+    </div>
+  </nav>
+  
+  
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <h1>Dashboard</h1>
+
+    <!-- Grant Overview Card -->
+    <section class="card-section">
+      <div class="card-header">
+        <h2>Grant Overview</h2>
+        <button class="filter-button" id="toggle-grant-filter">Filter</button>
+         </div>
+
+     <!-- Filter Panel for Grant Overview (hidden by default) -->
+        <div class="filter-sort" id="grant-filter-panel">
+            <label for="sort-options">Sort by:</label>
+            <select id="sort-options">
+            <option value="default">Select</option>
+            <option value="status">Status</option>
+            <option value="lead-asc">Project Lead: A–Z</option>
+            <option value="lead-desc">Project Lead: Z–A</option>
+            </select>
+        </div>
+        
+
+
+      <!-- Scrollable Table Container -->
+      <div class="table-scrollable">
+        <table id="grant-table">
+          <thead>
+            <tr>
+              <th>Grant Title</th>
+              <th>Category</th>
+              <th>Funding Organization</th>
+              <th>Submission</th>
+              <th>Award Date</th>
+              <th>Amount</th>
+              <th>Project Lead</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr onclick="window.location.href='dashboard-insight.html?grantId=1'" style="cursor: pointer;">
+              <td>Early Childhood Education Research</td>
+              <td>Research</td>
+              <td>National Science Foundation</td>
+              <td>May 14, 2023</td>
+              <td>Aug 17, 2023</td>
+              <td>$125,000</td>
+              <td>Dr. Sarah Johnson</td>
+              <td><span class="status-pill active">Active</span></td>
+            </tr>
+            <tr onclick="window.location.href='dashboard-insight.html?grantId=2'" style="cursor: pointer;">
+              <td>Technology Integration in Special Education</td>
+              <td>Technology</td>
+              <td>Dept. of Education</td>
+              <td>June 30, 2023</td>
+              <td>Nov 12, 2023</td>
+              <td>$300,000</td>
+              <td>Dr. James Wilson</td>
+              <td><span class="status-pill review">In Review</span></td>
+            </tr>
+            <tr onclick="window.location.href='dashboard-insight.html?grantId=3'" style="cursor: pointer;">
+              <td>Professional Development in Special Education</td>
+              <td>Professional Dev.</td>
+              <td>State Dept. of Education</td>
+              <td>April 29, 2023</td>
+              <td>Sep 20, 2023</td>
+              <td>$50,000</td>
+              <td>Dr. Lisa Patel</td>
+              <td><span class="status-pill pending">Pending</span></td>
+            </tr>
+            <!-- Additional rows for scrolling -->
+            <tr onclick="window.location.href='dashboard-insight.html?grantId=4'" style="cursor: pointer;">
+              <td>Literacy Improvement for ESL Students</td>
+              <td>Education</td>
+              <td>XYZ Foundation</td>
+              <td>July 15, 2023</td>
+              <td>Dec 1, 2023</td>
+              <td>$80,000</td>
+              <td>Dr. Amanda Lee</td>
+              <td><span class="status-pill pending">Pending</span></td>
+            </tr>
+            <tr onclick="window.location.href='dashboard-insight.html?grantId=5'" style="cursor: pointer;">
+              <td>Virtual STEM Outreach</td>
+              <td>STEM</td>
+              <td>Science Education Trust</td>
+              <td>June 20, 2023</td>
+              <td>Oct 5, 2023</td>
+              <td>$150,000</td>
+              <td>Dr. Kevin Brown</td>
+              <td><span class="status-pill review">In Review</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Card Footer with "New Grant Assignment" and button -->
+      <div class="card-footer">
+       
+        <a href="grant-application.html" class="create-button">Create New Grant Application</a>
+    </div>
+    </section>
+
+    <!-- Project Grants Overview Card -->
+    <section class="card-section">
+      <div class="card-header">
+        <h2>Project Grants Overview</h2>
+        <button class="filter-button" id="toggle-project-filter">Filter</button>
+      </div>
+
+      <div class="filter-sort" id="project-filter-panel">
+        <label for="project-sort-options">Sort by:</label>
+        <select id="project-sort-options">
+          <option value="default">Select</option>
+          <option value="status">Status</option>
+          <option value="lead-asc">Project Lead: A–Z</option>
+          <option value="lead-desc">Project Lead: Z–A</option>
+        </select>
+      </div>
+
+      <!-- Scrollable Table Container -->
+      <div class="table-scrollable">
+        <table id="project-table"> 
+              <thead>
+            <tr>
+              <th>Project Title</th>
+              <th>Status</th>
+              <th>Project Lead</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Early Childhood Education Research Implementation</td>
+              <td><span class="status-pill in-progress">In Progress</span></td>
+              <td>Sarah Johnson</td>
+            </tr>
+            <tr>
+              <td>Community Literacy Program Pilot</td>
+              <td><span class="status-pill pending">Pending</span></td>
+              <td>David Chu</td>
+            </tr>
+            <tr>
+              <td>Technology Integration in Special Education Pilot</td>
+              <td><span class="status-pill in-progress">In Progress</span></td>
+              <td>James Wilson</td>
+            </tr>
+            <tr>
+              <td>Professional Development Workshop Series</td>
+              <td><span class="status-pill completed">Completed</span></td>
+              <td>Lisa Patel</td>
+            </tr>
+            <!-- Additional rows for scrolling -->
+            <tr>
+              <td>After-School Coding Initiative</td>
+              <td><span class="status-pill pending">Pending</span></td>
+              <td>Jessica Adams</td>
+            </tr>
+            <tr>
+              <td>Summer STEM Bootcamp</td>
+              <td><span class="status-pill active">Active</span></td>
+              <td>Michael Green</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Card Footer with "New Project Admin" and button -->
+      <div class="card-footer">
+     
+        <button class="create-button">Create New Project Admin</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global & Page-Specific JS -->
+  <script src="./js/main.js"></script>
+  <script src="./js/dashboard.js"></script>
+</body>
+</html>

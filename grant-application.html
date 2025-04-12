@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JMU CARE | Grant Application</title>
+
+  <!-- Global & Page-Specific CSS -->
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/grant-application.css" />
+
+  <!-- Google Font: Poppins (Optional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" 
+    rel="stylesheet"
+  >
+</head>
+<body>
+  <!-- Top Navigation -->
+  <nav class="navbar">
+    <div class="navbar-brand">JMU CARE</div>
+    <!-- Hamburger Toggle Button (visible on small screens) -->
+    <button class="navbar-toggle" id="navbar-toggle">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="dashboard.html" >Dashboard</a></li>
+      <li><a href="grant-application.html" class="active">Grant Application</a></li>
+      <li><a href="create-new-user.html">Create User</a></li>
+      <li><a href="messages.html">Messages</a></li>
+    </ul>
+    <div class="user-greeting">
+      <span>Welcome, John</span>
+      <div class="user-initials">JD</div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <h1>Grant Application</h1>
+
+    <section class="form-container">
+      <form>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="faculty">Faculty</label>
+            <select id="faculty" name="faculty" required>
+              <option value="" disabled selected>Select Faculty</option>
+              <option value="faculty1">Faculty 1</option>
+              <option value="faculty2">Faculty 2</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="category">Grant Category</label>
+            <select id="category" name="category" required>
+              <option value="" disabled selected>Select category</option>
+              <option value="research">Research</option>
+              <option value="technology">Technology</option>
+              <option value="professional-dev">Professional Dev.</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="organization">Funding Organization</label>
+            <input 
+              type="text" 
+              id="organization" 
+              name="organization" 
+              placeholder="Enter funding organization" 
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="awardDate">Award Date</label>
+            <input 
+              type="date" 
+              id="awardDate" 
+              name="awardDate" 
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group full-width">
+            <label for="awardAmount">Award Amount ($)</label>
+            <input 
+              type="number" 
+              id="awardAmount" 
+              name="awardAmount" 
+              placeholder="Enter award amount" 
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="reset" class="clear-button">Clear</button>
+          <button type="submit" class="add-button">Add Grant</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Global & Page-Specific JS -->
+  <script src="./js/main.js"></script>
+  <!-- <script src="./js/grant-application.js"></script> (if needed) -->
+</body>
+</html>
